@@ -627,10 +627,23 @@
     }
 
     @media (max-width: 760px) {
-      /* Hide side artwork on narrow screens so text and cards stay clear. */
+      /* Keep the wallpaper visible as slim side strips on phones. */
       body::before,
       body::after {
-        display: none;
+        display: block;
+        width: 16vw;
+        opacity: .18;
+        background-size: auto 100%;
+        background-position: center center;
+      }
+    }
+
+    @media (max-width: 420px) {
+      /* Extra-narrow phones: reduce the artwork so it never dominates. */
+      body::before,
+      body::after {
+        width: 13vw;
+        opacity: .16;
       }
     }
 
@@ -662,6 +675,9 @@
             <span>
               📺 Anime fan
             </span>
+          </div>
+          <p class="bio-sub">Into gaming gear</p>
+        </div>
       </div>
     </header>
 
