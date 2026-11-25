@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f6f3ed" />
+  <meta name="theme-color" content="#e5e9ea" />
   <meta name="description" content="Nine — Gamer, music lover, anime fan. Welcome to my little corner." />
   <title>My Space — Nine</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -355,25 +355,25 @@
     }
 
 
-    /* CHIBI ANIME SKIN — visual styling only; original text, links and images retained */
+    /* CHIBI ANIME — soft blue palette (original content and links retained) */
     :root {
-      --bg: #fff7fb;
-      --paper: rgba(255, 255, 255, .92);
-      --paper-solid: #fffdfd;
-      --ink: #393446;
-      --muted: #898296;
-      --sage: #8a78ad;
-      --sage-soft: #f2e9fa;
-      --line: #f0dce9;
-      --shadow: 0 12px 30px rgba(177, 137, 178, .13);
+      --bg: #e5e9ea;
+      --paper: rgba(229, 233, 234, .94);
+      --paper-solid: #e5e9ea;
+      --ink: #173150;
+      --muted: #627ea3;
+      --sage: #3c6496;
+      --sage-soft: #d2d7dd;
+      --line: #b8c8d8;
+      --shadow: 0 12px 30px rgba(23, 49, 80, .13);
       --radius: 27px;
     }
 
     body {
       background:
-        radial-gradient(ellipse at 8% 10%, rgba(255, 215, 233, .62), transparent 28rem),
-        radial-gradient(ellipse at 92% 30%, rgba(218, 224, 255, .54), transparent 30rem),
-        radial-gradient(ellipse at 52% 96%, rgba(255, 239, 205, .48), transparent 32rem),
+        radial-gradient(ellipse at 8% 10%, rgba(184, 200, 216, .58), transparent 28rem),
+        radial-gradient(ellipse at 92% 30%, rgba(171, 186, 209, .45), transparent 30rem),
+        radial-gradient(ellipse at 52% 96%, rgba(210, 215, 221, .60), transparent 32rem),
         var(--bg);
       color: var(--ink);
       font-family: "Mitr", "IBM Plex Sans Thai", Inter, sans-serif;
@@ -385,73 +385,70 @@
 
     .hero::before {
       background: linear-gradient(112deg,
-        rgba(255, 248, 252, .98) 0%,
-        rgba(255, 248, 252, .91) 37%,
-        rgba(255, 244, 250, .25) 73%,
-        rgba(245, 241, 255, .10) 100%);
+        rgba(229, 233, 234, .98) 0%,
+        rgba(229, 233, 234, .91) 37%,
+        rgba(210, 215, 221, .28) 73%,
+        rgba(184, 200, 216, .12) 100%);
     }
 
-    .hero-art {
-      filter: saturate(1.06) brightness(1.025);
-    }
+    .hero-art { filter: saturate(.92) brightness(1.035); }
 
     .brand {
-      color: #786493;
+      color: #1c3e6d;
       font-family: "Mitr", Inter, sans-serif;
       font-size: clamp(3.5rem, 7vw, 5.8rem);
       font-weight: 600;
       letter-spacing: -.055em;
-      text-shadow: 0 3px 0 rgba(255,255,255,.72);
+      text-shadow: 0 3px 0 rgba(229, 233, 234, .85);
     }
 
     .brand::after {
       height: 4px;
       border-radius: 999px;
       margin-top: 14px;
-      background: linear-gradient(90deg, #d9a8cc, #b9b4e4, transparent);
+      background: linear-gradient(90deg, #84aacf, #627ea3, transparent);
       transform: rotate(-2deg);
     }
 
     .avatar-frame {
       padding: 5px;
-      background: linear-gradient(145deg, #fff, #fff0f7);
-      border: 3px solid #f3d8e9;
-      box-shadow: 0 0 0 5px rgba(255,255,255,.76),
-                  0 9px 24px rgba(174, 132, 171, .18);
+      background: linear-gradient(145deg, #e5e9ea, #b8c8d8);
+      border: 3px solid #abbad1;
+      box-shadow: 0 0 0 5px rgba(229, 233, 234, .82),
+                  0 9px 24px rgba(23, 49, 80, .16);
     }
 
     .profile-info {
       border-left: 0;
       padding: 13px 18px;
       border-radius: 20px;
-      background: rgba(255,255,255,.68);
-      border: 1px solid rgba(239, 215, 232, .9);
-      box-shadow: 0 5px 18px rgba(177, 137, 178, .08);
+      background: rgba(229, 233, 234, .78);
+      border: 1px solid rgba(184, 200, 216, .92);
+      box-shadow: 0 5px 18px rgba(23, 49, 80, .08);
     }
 
     .profile-info h1 {
-      color: #55466c;
+      color: #173150;
       font-weight: 700;
       letter-spacing: -.04em;
     }
 
-    .handle { color: #8d8199; }
-
-    .bio { color: #5c5367; }
+    .handle { color: #627ea3; }
+    .bio { color: #384868; }
 
     .bio-item {
       padding: 5px 11px;
       border-radius: 999px;
-      background: rgba(255,255,255,.76);
-      border: 1px solid #f0deeb;
-      box-shadow: 0 3px 8px rgba(177, 137, 178, .06);
+      background: rgba(229, 233, 234, .88);
+      border: 1px solid #b8c8d8;
+      box-shadow: 0 3px 8px rgba(23, 49, 80, .07);
     }
 
-    .bio-item svg { color: #9b82b9; }
-    .bio-sub { color: #8e8298; }
+    .bio-item svg { color: #3c6496; }
+    .bio-sub { color: #627ea3; }
 
     .section-heading {
-      color: #62536f;
+      color: #384868;
       font-family: "Mitr", "IBM Plex Sans Thai", Inter, sans-serif;
       font-weight: 600;
       letter-spacing: .10em;
@@ -461,55 +458,53 @@
       width: 12px;
       height: 27px;
       border-radius: 999px;
-      background: linear-gradient(180deg, #e6b9d6, #b9b1e5);
-      box-shadow: 0 0 0 5px rgba(237, 216, 239, .45);
+      background: linear-gradient(180deg, #84aacf, #627ea3);
+      box-shadow: 0 0 0 5px rgba(171, 186, 209, .35);
     }
 
     .section-heading::after {
       content: "✦";
       margin-left: auto;
       padding-right: 5px;
-      color: #dba8cb;
+      color: #84aacf;
       font-size: 1.15rem;
       letter-spacing: 0;
     }
 
     .link-card {
-      border: 2px solid #f0deea;
+      border: 2px solid #b8c8d8;
       border-radius: 27px;
-      background: linear-gradient(125deg, rgba(255,255,255,.98), rgba(255,249,253,.92));
-      box-shadow: 0 5px 0 rgba(229, 203, 224, .28),
-                  0 11px 27px rgba(177, 137, 178, .10);
+      background: linear-gradient(125deg, rgba(229, 233, 234, .98), rgba(210, 215, 221, .92));
+      box-shadow: 0 5px 0 rgba(171, 186, 209, .34),
+                  0 11px 27px rgba(23, 49, 80, .10);
     }
 
     .link-card::after {
       background:
-        radial-gradient(circle at 94% 12%, rgba(239, 220, 249, .28) 0 44px, transparent 45px),
-        linear-gradient(90deg, rgba(255,255,255,0) 35%, rgba(255,247,252,.22) 67%, rgba(255,247,252,.50));
+        radial-gradient(circle at 94% 12%, rgba(132, 170, 207, .18) 0 44px, transparent 45px),
+        linear-gradient(90deg, rgba(229, 233, 234, 0) 35%, rgba(229, 233, 234, .24) 67%, rgba(229, 233, 234, .58));
     }
 
     .link-card:hover {
       transform: translateY(-4px) rotate(-.25deg);
-      border-color: #d8bddf;
-      box-shadow: 0 7px 0 rgba(219, 194, 223, .30),
-                  0 16px 30px rgba(177, 137, 178, .16);
+      border-color: #84aacf;
+      box-shadow: 0 7px 0 rgba(171, 186, 209, .38),
+                  0 16px 30px rgba(23, 49, 80, .16);
     }
 
-    .link-card:focus-visible {
-      outline: 3px solid rgba(173, 145, 202, .62);
-    }
+    .link-card:focus-visible { outline: 3px solid rgba(60, 100, 150, .62); }
 
     .icon-box {
       border-radius: 24px;
-      background: linear-gradient(145deg, #f7ebfb, #e8efff);
-      color: #8a76aa;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.9),
-                  0 4px 10px rgba(173, 145, 202, .10);
+      background: linear-gradient(145deg, #d2d7dd, #b8c8d8);
+      color: #1c3e6d;
+      box-shadow: inset 0 0 0 1px rgba(229, 233, 234, .95),
+                  0 4px 10px rgba(23, 49, 80, .10);
     }
 
     .link-title,
     .social-card .link-title {
-      color: #453b54;
+      color: #173150;
       font-family: "Mitr", "IBM Plex Sans Thai", Inter, sans-serif;
       font-weight: 600;
       letter-spacing: -.025em;
@@ -517,37 +512,51 @@
 
     .link-desc,
     .social-card .link-desc {
-      color: #7d7487;
+      color: #627ea3;
       font-weight: 400;
     }
 
     .pill {
-      background: linear-gradient(110deg, #b18fbd, #938cc4);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,.72);
-      box-shadow: 0 3px 8px rgba(160, 130, 181, .16);
+      background: linear-gradient(110deg, #3c6496, #384868);
+      color: #e5e9ea;
+      border: 1px solid rgba(229, 233, 234, .82);
+      box-shadow: 0 3px 8px rgba(23, 49, 80, .16);
       font-family: "Mitr", "IBM Plex Sans Thai", Inter, sans-serif;
       font-weight: 500;
     }
 
-    .arrow { color: #9a83b0; }
+    .arrow { color: #3c6496; }
 
     .footer-quote {
-      color: #81738c;
+      color: #627ea3;
       font-family: "Mitr", "IBM Plex Sans Thai", Inter, sans-serif;
       font-weight: 500;
     }
 
-    .footer-rule { background: #e4cfe1; }
-    .footer-star { color: #c28fb9; }
-    .cat-accent { filter: drop-shadow(0 5px 8px rgba(150, 119, 158, .14)); }
+    .footer-rule { background: #abbad1; }
+    .footer-star { color: #3c6496; }
+    .cat-accent { filter: drop-shadow(0 5px 8px rgba(23, 49, 80, .15)); }
+
+    /* Official-style social marks using inline SVG, so no logo files are needed. */
+    .social-card .icon-box {
+      background: linear-gradient(145deg, #b8c8d8, #abbad1);
+      color: #1c3e6d;
+    }
+    .social-card .icon-box .brand-icon {
+      width: 42px;
+      height: 42px;
+      fill: currentColor;
+      stroke: none;
+    }
+    .social-card .icon-box .brand-icon path { fill: currentColor; stroke: none; }
+    .social-card .icon-box .brand-icon.youtube-mark { width: 48px; height: 48px; }
 
     @media (max-width: 760px) {
       .hero::before {
         background: linear-gradient(180deg,
-          rgba(255, 247, 252, .40) 0%,
-          rgba(255, 247, 252, .75) 48%,
-          #fff7fb 92%);
+          rgba(229, 233, 234, .42) 0%,
+          rgba(229, 233, 234, .77) 48%,
+          #e5e9ea 92%);
       }
       .profile-info {
         padding: 10px 13px;
@@ -556,6 +565,8 @@
       .bio-item { padding: 4px 9px; }
       .link-card { border-radius: 22px; }
       .icon-box { border-radius: 19px; }
+      .social-card .icon-box .brand-icon { width: 30px; height: 30px; }
+      .social-card .icon-box .brand-icon.youtube-mark { width: 34px; height: 34px; }
     }
 
     @media (max-width: 420px) {
@@ -630,7 +641,7 @@
         <div class="social-grid">
           <a class="link-card social-card" href="https://www.facebook.com/korawit.wipataputi" target="_blank" rel="noopener noreferrer" aria-label="Facebook — open in a new tab">
             <div class="icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a5 5 0 0 0-5 5v3H6v4h3v5h4v-5h3l1-4h-4V9a1 1 0 0 1 1-1Z"/></svg>
+              <svg class="brand-icon facebook-mark" viewBox="0 0 24 24" role="img" aria-label="Facebook"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.016 10.125 11.854v-8.385H7.078v-3.469h3.047V9.428c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.931-1.956 1.886v2.26h3.328l-.532 3.469h-2.796v8.385C19.612 23.089 24 18.092 24 12.073Z"/></svg>
             </div>
             <div class="link-content"><h3 class="link-title">Facebook</h3><p class="link-desc">ช่องทางติดต่อ</p></div>
             <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
@@ -638,7 +649,7 @@
 
           <a class="link-card social-card" href="https://www.youtube.com/@sheeshhhhcake119" target="_blank" rel="noopener noreferrer" aria-label="YouTube — open in a new tab">
             <div class="icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z"/></svg>
+              <svg class="brand-icon youtube-mark" viewBox="0 0 24 24" role="img" aria-label="YouTube"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.016 3.016 0 0 0 .5 6.186C0 8.07 0 12 0 12s0 3.93.5 5.814a3.016 3.016 0 0 0 2.123 2.136c1.872.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.016 3.016 0 0 0 2.122-2.136c.5-1.884.5-5.814.5-5.814s0-3.93-.5-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg>
             </div>
             <div class="link-content"><h3 class="link-title">YouTube</h3><p class="link-desc">ดูคลิปไฮไลท์</p></div>
             <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
