@@ -575,6 +575,65 @@
       .link-card { border-radius: 20px; }
     }
 
+
+    /* SIDE BACKGROUND: portrait 736x1308, kept away from the content center */
+    body {
+      position: relative;
+      isolation: isolate;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      width: min(32vw, 460px);
+      background-image: url("background.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: auto 100%;
+      opacity: .24;
+      pointer-events: none;
+    }
+
+    /* Left edge */
+    body::before {
+      left: 0;
+      -webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0,0,0,.82) 48%, transparent 100%);
+      mask-image: linear-gradient(to right, #000 0%, rgba(0,0,0,.82) 48%, transparent 100%);
+    }
+
+    /* Right edge: mirrored for visual balance */
+    body::after {
+      right: 0;
+      transform: scaleX(-1);
+      -webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0,0,0,.82) 48%, transparent 100%);
+      mask-image: linear-gradient(to right, #000 0%, rgba(0,0,0,.82) 48%, transparent 100%);
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 900px) {
+      body::before,
+      body::after {
+        width: 24vw;
+        opacity: .14;
+      }
+    }
+
+    @media (max-width: 760px) {
+      /* Hide side artwork on narrow screens so text and cards stay clear. */
+      body::before,
+      body::after {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -603,6 +662,9 @@
             <span>
               📺 Anime fan
             </span>
+          </div>
+          <p class="bio-sub">Into gaming gear</p>
+        </div>
       </div>
     </header>
 
