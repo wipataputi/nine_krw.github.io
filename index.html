@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Space — Minimal Bio</title>
+
+  <!-- ฟอนต์สไตล์โมเดิร์น รองรับภาษาไทยและอังกฤษสวยงาม -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* --- โทนสี Minimal Nordic --- */
+    :root {
+      --bg-color: #f6f5f0;        /* สีพื้นหลังครีมนอร์ดิกอุ่นๆ */
+      --surface: #ffffff;         /* สีพื้นหลังการ์ด/ปุ่ม */
+      --surface-hover: #fbfaf7;   /* สีตอนเอาเมาส์ชี้ */
+      --border: #e5e2da;          /* เส้นขอบบางๆ */
+      --border-hover: #b8b3a8;    /* เส้นขอบตอนชี้ */
+      --text-main: #222426;       /* สีดำถ่าน (สบายตากว่าดำสนิท) */
+      --text-muted: #6e7175;      /* สีเทาหิน */
+      --accent: #4c6259;          /* สีเขียวหม่น (Nordic Sage) */
+      --accent-soft: #e9eeec;     /* พื้นหลังแท็กสีเขียวอ่อน */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 48px 20px 64px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 440px;
+    }
+
+    /* --- ส่วนหัวโปรไฟล์ --- */
+    .profile {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .avatar-wrap {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background-color: var(--accent-soft);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+    }
+
+    .avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile h1 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .profile .handle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .profile .bio {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    /* --- หัวข้อหมวดหมู่ --- */
+    .section-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin: 28px 0 12px 4px;
+    }
+
+    /* --- รายการลิงก์ --- */
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-hover);
+      background-color: var(--surface-hover);
+    }
+
+    .link-card:active {
+      transform: translateY(0);
+    }
+
+    /* กล่องไอคอนด้านซ้าย */
+    .icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: var(--bg-color);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--text-main);
+    }
+
+    /* เน้นการ์ดเด่น (เช่น Tier List เมาส์) */
+    .link-card.featured .icon-box {
+      background-color: var(--accent-soft);
+      border-color: transparent;
+      color: var(--accent);
+    }
+
+    .link-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .link-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge {
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background-color: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .link-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+
+    .arrow {
+      color: var(--text-muted);
+      opacity: 0.6;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .link-card:hover .arrow {
+      transform: translateX(3px);
+      opacity: 1;
+    }
+
+    /* --- ปุ่มโซเชียลแบบกะทัดรัด (ถ้าอยากใส่หลายช่องทาง) --- */
+    .social-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    /* --- ส่วนท้าย --- */
+    footer {
+      margin-top: 44px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    svg {
+      width: 19px;
+      height: 19px;
+      stroke-width: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <!-- ==================== 1. ข้อมูลส่วนตัว ==================== -->
+    <header class="profile">
+      <div class="avatar-wrap">
+        <!-- ถ้ายังไม่ได้อัปโหลดรูป avatar.jpg ระบบจะซ่อนรูปแล้วโชว์ตัวอักษรย่อแทน -->
+        <img src="avatar.jpg" alt="Profile" onerror="this.style.display='none'" />
+        <span>ME</span>
+      </div>
+
+      <!-- แก้ไขชื่อและคำแนะนำตัวตรงนี้ -->
+      <h1>ชื่อของคุณ</h1>
+      <p class="handle">@your.ig.handle</p>
+      <p class="bio">
+        ชอบเรื่อง Gaming Gear, Minimal Desk Setup และสิ่งต่างๆ ที่น่าสนใจ
+      </p>
+    </header>
+
+    <!-- ==================== 2. ความสนใจ & โปรเจกต์ ==================== -->
+    <div class="section-title">Interests &amp; Picks</div>
+    <section class="link-list">
+
+      <!-- ลิงก์ Tier List เมาส์ (ใส่ URL แทนเครื่องหมาย #) -->
+      <a href="https://tiermaker.com/..." target="_blank" rel="noopener noreferrer" class="link-card featured">
+        <div class="icon-box">
+          <!-- ไอคอนเมาส์ -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="3" width="12" height="18" rx="6"></rect>
+            <path d="M12 7v4"></path>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">
+            Mouse Tier List <span class="badge">Top Picks</span>
+          </div>
+          <div class="link-desc">รวมอันดับเมาส์เกมมิ่งที่เคยใช้และแนะนำ</div>
+        </div>
+        <div class="arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"></path>
+          </svg>
+        </div>
+      </a>
+
+      <!-- ความสนใจอื่น 1: เช่น โต๊ะคอม / Gear List -->
+      <a href="#" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="12" rx="2"></rect>
+            <path d="M8 20h8M12 16v4"></path>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">My Desk Setup &amp; Gear</div>
+          <div class="link-desc">คีย์บอร์ด แผ่นรองเมาส์ และอุปกรณ์บนโต๊ะ</div>
+        </div>
+        <div class="arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"></path>
+          </svg>
+        </div>
+      </a>
+
+      <!-- ความสนใจอื่น 2: เช่น เพลง / หนัง / บทความที่ชอบ -->
+      <a href="#" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Playlist / Other Interests</div>
+          <div class="link-desc">เพลงที่ฟังช่วงนี้ หรือสิ่งที่กำลังอิน</div>
+        </div>
+        <div class="arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"></path>
+          </svg>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- ==================== 3. ช่องทางติดต่อ (โซเชียล) ==================== -->
+    <div class="section-title">Connect</div>
+    <section class="social-row">
+
+      <!-- Facebook -->
+      <a href="https://facebook.com/..." target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Facebook</div>
+          <div class="link-desc">ทักมาคุยได้</div>
+        </div>
+      </a>
+
+      <!-- ช่องทางอื่น เช่น Discord / YouTube / TikTok / X -->
+      <a href="#" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Discord / Contact</div>
+          <div class="link-desc">ช่องทางอื่นๆ</div>
+        </div>
+      </a>
+
+    </section>
+
+    <footer>
+      © 2026 — Crafted with Minimal Nordic vibe
+    </footer>
+  </main>
+
+</body>
+</html>
