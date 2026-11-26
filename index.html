@@ -537,19 +537,17 @@
     .footer-star { color: #3c6496; }
     .cat-accent { filter: drop-shadow(0 5px 8px rgba(23, 49, 80, .15)); }
 
-    /* Official-style social marks using inline SVG, so no logo files are needed. */
+    /* Chibi social icons loaded from assets/icons/ */
     .social-card .icon-box {
       background: linear-gradient(145deg, #b8c8d8, #abbad1);
       color: #1c3e6d;
     }
-    .social-card .icon-box .brand-icon {
-      width: 42px;
-      height: 42px;
-      fill: currentColor;
-      stroke: none;
+    .social-card .icon-box .chibi-icon {
+      display: block;
+      width: 76px;
+      height: 76px;
+      object-fit: contain;
     }
-    .social-card .icon-box .brand-icon path { fill: currentColor; stroke: none; }
-    .social-card .icon-box .brand-icon.youtube-mark { width: 48px; height: 48px; }
 
     @media (max-width: 760px) {
       .hero::before {
@@ -565,12 +563,12 @@
       .bio-item { padding: 4px 9px; }
       .link-card { border-radius: 22px; }
       .icon-box { border-radius: 19px; }
-      .social-card .icon-box .brand-icon { width: 30px; height: 30px; }
-      .social-card .icon-box .brand-icon.youtube-mark { width: 34px; height: 34px; }
+      .social-card .icon-box .chibi-icon { width: 48px; height: 48px; }
     }
 
     @media (max-width: 420px) {
       .profile-info { padding: 8px 10px; }
+      .social-card .icon-box .chibi-icon { width: 46px; height: 46px; }
       .section-heading::after { font-size: 1rem; }
       .link-card { border-radius: 20px; }
     }
@@ -676,7 +674,6 @@
               📺 Anime fan
             </span>
           </div>
-          <p class="bio-sub">Into gaming gear</p>
         </div>
       </div>
     </header>
@@ -716,7 +713,7 @@
         <div class="social-grid">
           <a class="link-card social-card" href="https://www.facebook.com/korawit.wipataputi" target="_blank" rel="noopener noreferrer" aria-label="Facebook — open in a new tab">
             <div class="icon-box" aria-hidden="true">
-              <svg class="brand-icon facebook-mark" viewBox="0 0 24 24" role="img" aria-label="Facebook"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.016 10.125 11.854v-8.385H7.078v-3.469h3.047V9.428c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.931-1.956 1.886v2.26h3.328l-.532 3.469h-2.796v8.385C19.612 23.089 24 18.092 24 12.073Z"/></svg>
+              <img class="chibi-icon" src="assets/icons/facebook-chibi.jpg" alt="" />
             </div>
             <div class="link-content"><h3 class="link-title">Facebook</h3><p class="link-desc">ช่องทางติดต่อ</p></div>
             <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
@@ -724,7 +721,7 @@
 
           <a class="link-card social-card" href="https://www.youtube.com/@sheeshhhhcake119" target="_blank" rel="noopener noreferrer" aria-label="YouTube — open in a new tab">
             <div class="icon-box" aria-hidden="true">
-              <svg class="brand-icon youtube-mark" viewBox="0 0 24 24" role="img" aria-label="YouTube"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.016 3.016 0 0 0 .5 6.186C0 8.07 0 12 0 12s0 3.93.5 5.814a3.016 3.016 0 0 0 2.123 2.136c1.872.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.016 3.016 0 0 0 2.122-2.136c.5-1.884.5-5.814.5-5.814s0-3.93-.5-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg>
+              <img class="chibi-icon" src="assets/icons/youtube-chibi.png" alt="" />
             </div>
             <div class="link-content"><h3 class="link-title">YouTube</h3><p class="link-desc">ดูคลิปไฮไลท์</p></div>
             <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
